@@ -1,0 +1,336 @@
+/*----шрифты-------------------------------------------*/
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+/*----переменные-------------------------------------------*/
+
+:root {
+    --maxWidth: 1140px;
+    --mainFont: "Montserrat", sans-serif;
+    --black: #000000;
+    --grey: #d0d0d0;
+    --white: #FFFFFF;
+}
+
+/*----основа-------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+body {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: var(--mainFont);
+    background-color: var(--black);
+    color: var(--white);
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.main {
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
+}
+._container {
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: var(--maxWidth);
+}
+.help {
+    margin: 0 0 0 10px; 
+    font-size: 12px;
+    color: var(--grey);
+}
+.help::before {
+    content: '*';
+}
+button:hover {
+    filter: brightness(120%);
+}
+button:active {
+    filter: brightness(80%);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    border: 1px solid inherit;
+    -webkit-text-fill-color: var(--white);
+    -webkit-box-shadow: 0 0 0px 1000px inherit inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/*----header-------------------------------------------*/
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+/*----pa1-------------------------------------------*/
+
+.pa1 {
+    width: 100%;
+}
+
+/*----pa2-------------------------------------------*/
+
+.pa2 {
+    width: 100%;
+}
+.pa2_container {
+    padding: 60px 15px 0 15px;
+}
+.form {
+    margin: 20px auto 0 auto;
+    padding: 20px;
+    width: min(100%, 735px);
+    border: 2px solid var(--white);
+    border-radius: 20px;
+}
+.form h2 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.labelInput {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+.labelInput label {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 10px 0;
+}
+.labelInput input[type="text"] {
+    height: 40px;
+    width: 100%;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    padding: 0 0 0 10px;
+    background-color: var(--black);
+}
+.formBtn {
+    user-select: none;
+    cursor: pointer;
+    margin: 0  auto;
+    width: 60%;
+    height: 40px;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.formBtn:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+.formBtn:active {
+    background-color: var(--grey);
+    color: var(--black);
+    transition: 0.1s;
+}
+
+/*----pa3-------------------------------------------*/
+
+.pa3 {
+    width: 100%;
+}
+.pa3_container {
+    padding: 60px 15px 60px 15px;
+}
+.resBlock {
+    position: relative;
+    display: none;
+    margin: 0 auto;
+    height: 700px;
+    width: 700px;
+    border: 1px solid var(--grey);
+}
+.resBlock.active {
+    display: block;
+}
+.resBlockWrapper {
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+}
+#image2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: brightness(50%);
+    filter: blur(20px);
+}
+.top, .bottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topLeft, .topRight {
+    width: 50%;
+    height: 100%;
+    padding: 10px;
+}
+.topLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topLeft img {
+    height: 100%;
+    width: 100%;
+}
+.topRight {
+    position: relative;
+}
+.topRight span {
+    display: block;
+}
+.topRight i {
+    font-size: 26px;
+    font-weight: 500;
+    display: block;
+}
+.boldText {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 2px 0;
+    text-transform: uppercase;
+}
+#resTittle::before, #resTittle::after {
+    content: '"';
+}
+#resAutor {
+    font-size: 12px;
+    color: var(--grey);
+}
+.resLi {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 3px 0 0 0;
+}
+.topRight hr {
+    position: absolute;
+    bottom: 10px;
+    background-color: var(--white);
+    width: 90%;
+    height: 1px;
+}
+.bottom {
+    padding: 10px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.b {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 15px 0;
+}
+.ocenka {
+    height: 100%;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ocenkaTittle {
+    user-select: none;
+    width: 100%;
+    height: 50%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+}
+.ocenkaOc {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.ocenkaOc span {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+}
+.ocenkaOc span.active {
+    background-color: var(--white);
+    color: var(--black);
+}
+.actOc, .vizOc {
+    justify-content: center;
+    gap: 5px;
+}
+.resultat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 46px;
+    font-weight: 800;
+}
+#resXs::before {
+    content: '[';
+}
+#resXs::after {
+    content: 'X]';
+}

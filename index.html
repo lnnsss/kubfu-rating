@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+    <title>kubfu rating</title>
+</head>
+<body>
+    <div class="wrapper" id="app">
+        <header class="header">
+            <a href="index.html" class="logo">kubfu</a>
+        </header>
+        <main class="main">
+            <div class="pa1">
+                <video src="images/mainBG.mp4" autoplay muted loop width="100%"></video>
+            </div>
+            <div class="pa2">
+                <div class="_container pa2_container">
+                    <form class="form">
+                        <h2>Rate</h2>
+
+                        <div class="labelInput">
+                            <label for="kitTittle">Tittle</label>
+                            <input type="text" id="kitTittle" placeholder="PARANOID">
+                        </div>
+                        
+                        <div class="labelInput">
+                            <label for="kitType">Type</label>
+                            <input type="text" id="kitType" placeholder="STASH KIT">
+                        </div>
+                        
+                        <div class="labelInput">
+                            <label for="kitAutor">Autor(s)</label>
+                            <input type="text" id="kitAutor" placeholder="@glorydamn @yxellix">
+                        </div>
+
+                        <div class="labelInput">
+                            <label for="kitKeep">Keep<span class="help">Распишите через запятые</span></label>
+                            <input type="text" id="kitKeep" placeholder="One Shots 30, Loops 15">
+                        </div>
+                        
+                        <div class="labelInput">
+                            <label for="file1">Cover</label>
+                            <input type="file" id="file1">
+                        </div>
+
+                        <div class="formBtn" onclick="save()">Create</div>
+                        
+                    </form>
+                </div>
+            </div>
+            <div class="pa3">
+                <div class="_container pa3_container">
+                    <div class="resBlock active">
+                        <img id="image2">
+                        <div class="resBlockWrapper">
+                            <div class="top">
+                                <div class="topLeft">
+                                    <img id="image1">
+                                </div>
+                                <div class="topRight">
+                                    <i>kubfukitsrating</i>
+                                    <span class="boldText" id="resTittle">PARANOID</span>
+                                    <span class="boldText" id="resType">STASH KIT</span>
+                                    <span id="resAutor">@glorydamn @yxellix</span>
+                                    <ul class="resUl">
+                                    </ul>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="b b1">
+                                    <div class="ocenka">
+                                        <span class="ocenkaTittle">УНИВЕРСАЛЬНОСТЬ</span>
+                                        <div class="ocenkaOc uniOc">
+                                            <span class="active">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+                                            <span>6</span>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                                    </div>
+                                    <div class="ocenka">
+                                        <span class="ocenkaTittle">НАПОЛНЕННОСТЬ</span>
+                                        <div class="ocenkaOc napOc">
+                                            <span class="active">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+                                            <span>6</span>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b b2">
+                                    <div class="ocenka">
+                                        <span class="ocenkaTittle">ЗВУКИ</span>
+                                        <div class="ocenkaOc zvuOc">
+                                            <span class="active">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+                                            <span>6</span>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                                    </div>
+                                    <div class="ocenka">
+                                        <span class="ocenkaTittle">ЦЕЛОСТНОСТЬ</span>
+                                        <div class="ocenkaOc celOc">
+                                            <span class="active">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+                                            <span>6</span>
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span>10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b b3">
+                                    <div class="ocenka">
+                                        <span class="ocenkaTittle">АКТУАЛЬНОСТЬ [%]</span>
+                                        <div class="ocenkaOc actOc">
+                                            <span class="active">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                    <div class="ocenka">
+                                        <span class="ocenkaTittle">ВИЗУАЛ [ДОП]</span>
+                                        <div class="ocenkaOc vizOc">
+                                            <span class="active">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resultat">
+                                    <h3>РЕЗУЛЬТАТ</h3>
+                                    <p>&nbsp;<span id="resBalls"></span>/68 &nbsp; <span id="resXs"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script defer src="scripts/main.js"></script>
+</body>
+</html>
