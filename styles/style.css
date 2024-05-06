@@ -247,6 +247,12 @@ input:-webkit-autofill:focus {
     margin: 0 0 2px 0;
     text-transform: uppercase;
 }
+#resTittle {
+    width: 100%;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
 #resTittle::before, #resTittle::after {
     content: '"';
 }

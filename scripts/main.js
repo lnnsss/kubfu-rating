@@ -31,8 +31,10 @@ let kitUni = 1,
 /*----функции-------------------------------------------*/
 
 function displayLi(arr) {
-    let lis = [];
-    for (let i=0; i != 9; i++) {
+    let lis = '';
+    let n = 0;
+    arr.length < 9  ? n = arr.length : n = 9;
+    for (let i=0; i != n; i++) {
         let  li = `<li class="resLi">${arr[i]}</li>`;
         lis += li;
     };
