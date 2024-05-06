@@ -144,6 +144,19 @@ input:-webkit-autofill:focus {
     padding: 0 0 0 10px;
     background-color: var(--black);
 }
+#file1::file-selector-button {
+    cursor: pointer;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    height: 40px;
+    width: 160px;
+    background-color: inherit;
+    color: var(--white);
+    font-family: var(--mainFont);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 20px 0 0;
+}
 .formBtn {
     user-select: none;
     cursor: pointer;
