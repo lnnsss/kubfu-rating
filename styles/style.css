@@ -1,12 +1,12 @@
 /*----шрифты-------------------------------------------*/
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Geologica:100,200,300,regular,500,600,700,800,900);
 
 /*----переменные-------------------------------------------*/
 
 :root {
     --maxWidth: 1140px;
-    --mainFont: "Montserrat", sans-serif;
+    --mainFont: "Geologica", sans-serif;
     --black: #000000;
     --grey: #d0d0d0;
     --white: #FFFFFF;
@@ -179,6 +179,7 @@ input:-webkit-autofill:focus {
     padding: 60px 15px 60px 15px;
 }
 .resBlock {
+    user-select: none;
     position: relative;
     display: none;
     margin: 0 auto;
@@ -197,14 +198,16 @@ input:-webkit-autofill:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: inherit;
+    background: rgba(42, 42, 42, 0.2); 
+    backdrop-filter: blur(8px); 
 }
 #image2 {
     position: absolute;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
-    filter: brightness(50%);
-    filter: blur(20px);
+    filter: brightness(20%);
 }
 .top, .bottom {
     width: 100%;
@@ -334,4 +337,64 @@ input:-webkit-autofill:focus {
 }
 #resXs::after {
     content: 'X]';
+}
+#resBalls::after {
+    content: '/68';
+}
+
+/*----media-------------------------------------------*/
+
+@media (max-width: 425px) {
+    .resBlock {
+        width: min(100%, 350px); 
+        min-height: 1250px;
+    }
+    .top, .bottom {
+        flex-direction: column;
+        justify-content: start;
+    }
+    .top {
+        height: 650px;
+    }
+    .bottom {
+        height: 1050px;
+    }
+    .topRight, .topLeft {
+        width: 100%;
+        height: 50%;
+    }
+    .topLeft img {
+        height: 246px;
+    }
+    .topRight {
+        text-align: center;
+    }
+    .topRight {
+        height: auto;
+        padding: 0 0 20px 0;
+    }
+    .topRight hr {
+        width: 100%;
+    }
+    .b {
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .ocenka {
+        width: 100%;
+    }
+    .resultat {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .resultat h3 {
+        font-size: 32px;
+    }
+    #resBalls, #resXs {
+        font-size: 28px;
+    }
 }

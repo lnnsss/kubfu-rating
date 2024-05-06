@@ -21,8 +21,9 @@ let kitUni = 1,
     kitCel = 1,
     kitAct = 1,
     kitViz = 1,
-    kitBalls = kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz,
-    kitXs = kitBalls*10; 
+    kitBallSum = (kitUni + kitNap + kitZvu + kitCel + kitViz),
+    kitBalls = Math.ceil(kitBallSum + (kitBallSum / 100 * (10*kitAct))),
+    kitXs = Math.trunc(kitBalls  / 68 * 1000);
 
     resBalls.innerHTML = kitBalls;
     resXs.innerHTML = kitXs;
@@ -31,12 +32,13 @@ let kitUni = 1,
 
 function displayLi(arr) {
     let lis = [];
-    for (let i=0; i != arr.length; i++) {
+    for (let i=0; i != 9; i++) {
         let  li = `<li class="resLi">${arr[i]}</li>`;
         lis += li;
     };
     resUl.innerHTML = lis;
 };
+
 
 /*----OcListen-------------------------------------------*/
 
@@ -47,8 +49,11 @@ function uniHandleClick(e) {
     uniOcAr.forEach(dot => dot.classList.remove('active'));
     e.target.classList.add('active');
     kitUni = Number(e.target.innerHTML);
-    resBalls.innerHTML = kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz;
-    resXs.innerHTML = (kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz) * 10;
+    kitBallSum = (kitUni + kitNap + kitZvu + kitCel + kitViz);
+    kitBalls = Math.ceil(kitBallSum + (kitBallSum / 100 * (10*kitAct)));
+    kitXs = Math.trunc(kitBalls  / 68 * 1000);
+    resBalls.innerHTML = kitBalls;
+    resXs.innerHTML = kitXs;
 };
 
 let napOcNL = document.querySelectorAll(".napOc span");
@@ -58,8 +63,11 @@ function napHandleClick(e) {
     napOcAr.forEach(dot => dot.classList.remove('active'));
     e.target.classList.add('active');
     kitNap = Number(e.target.innerHTML);
-    resBalls.innerHTML = kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz; 
-    resXs.innerHTML = (kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz) * 10;
+    kitBallSum = (kitUni + kitNap + kitZvu + kitCel + kitViz);
+    kitBalls = Math.ceil(kitBallSum + (kitBallSum / 100 * (10*kitAct)));
+    kitXs = Math.trunc(kitBalls  / 68 * 1000);
+    resBalls.innerHTML = kitBalls;
+    resXs.innerHTML = kitXs;
 };
 
 let zvuOcNL = document.querySelectorAll(".zvuOc span");
@@ -69,8 +77,11 @@ function zvuHandleClick(e) {
     zvuOcAr.forEach(dot => dot.classList.remove('active'));
     e.target.classList.add('active');
     kitZvu = Number(e.target.innerHTML);
-    resBalls.innerHTML = kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz; 
-    resXs.innerHTML = (kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz) * 10;
+    kitBallSum = (kitUni + kitNap + kitZvu + kitCel + kitViz);
+    kitBalls = Math.ceil(kitBallSum + (kitBallSum / 100 * (10*kitAct)));
+    kitXs = Math.trunc(kitBalls  / 68 * 1000);
+    resBalls.innerHTML = kitBalls;
+    resXs.innerHTML = kitXs;
 };
 
 let celOcNL = document.querySelectorAll(".celOc span");
@@ -80,8 +91,11 @@ function celHandleClick(e) {
     celOcAr.forEach(dot => dot.classList.remove('active'));
     e.target.classList.add('active');
     kitCel = Number(e.target.innerHTML);
-    resBalls.innerHTML = kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz; 
-    resXs.innerHTML = (kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz) * 10;
+    kitBallSum = (kitUni + kitNap + kitZvu + kitCel + kitViz);
+    kitBalls = Math.ceil(kitBallSum + (kitBallSum / 100 * (10*kitAct)));
+    kitXs = Math.trunc(kitBalls  / 68 * 1000);
+    resBalls.innerHTML = kitBalls;
+    resXs.innerHTML = kitXs;
 };
 
 let actOcNL = document.querySelectorAll(".actOc span");
@@ -91,8 +105,11 @@ function actHandleClick(e) {
     actOcAr.forEach(dot => dot.classList.remove('active'));
     e.target.classList.add('active');
     kitAct = Number(e.target.innerHTML);
-    resBalls.innerHTML = kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz; 
-    resXs.innerHTML = (kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz) * 10;
+    kitBallSum = (kitUni + kitNap + kitZvu + kitCel + kitViz);
+    kitBalls = Math.ceil(kitBallSum + (kitBallSum / 100 * (10*kitAct)));
+    kitXs = Math.trunc(kitBalls  / 68 * 1000);
+    resBalls.innerHTML = kitBalls;
+    resXs.innerHTML = kitXs;
 };
 
 let vizOcNL = document.querySelectorAll(".vizOc span");
@@ -102,8 +119,11 @@ function vizHandleClick(e) {
     vizOcAr.forEach(dot => dot.classList.remove('active'));
     e.target.classList.add('active');
     kitViz = Number(e.target.innerHTML);
-    resBalls.innerHTML = kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz; 
-    resXs.innerHTML = (kitUni + kitNap + kitZvu + kitCel + kitAct + kitViz) * 10;
+    kitBallSum = (kitUni + kitNap + kitZvu + kitCel + kitViz);
+    kitBalls = Math.ceil(kitBallSum + (kitBallSum / 100 * (10*kitAct)));
+    kitXs = Math.trunc(kitBalls  / 68 * 1000);
+    resBalls.innerHTML = kitBalls;
+    resXs.innerHTML = kitXs;
 };
 
 /*----form-------------------------------------------*/
